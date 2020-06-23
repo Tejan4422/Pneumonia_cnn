@@ -11,3 +11,7 @@ Convolutional Neural Network to detect whether a person's MRI scan has Pneumonia
     2. MaxPooling with Pool size 2*2
     3. CONV2D with filter size 3*3, No Padding, No Strides, activation Relu
     4. MaxPooling with Pool size 2*2
+    5. Full Connection Activation Sigmoid, Optimizer = Adam, binary Cross Entropy
+    6. Model Accuracy on training Data 94%
+    7. Model Accuracy on Testing 88%
+    ![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/model_summary.png "Model Summary")
