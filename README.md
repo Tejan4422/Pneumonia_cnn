@@ -15,3 +15,14 @@ Convolutional Neural Network to detect whether a person's MRI scan has Pneumonia
     6. Model Accuracy on training Data 94%
     7. Model Accuracy on Testing 88%
     ![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/model_summary.png "Model Summary")
+
+* Case Studies : 
+Following is the MRI of a Normal Person Pneumonia -ve
+![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/normal.png "Negative Case")
+Following is the MRI of a Pneumonia +ve
+![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/pneumonia.png "Positive Case")
+![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/model_summary.png "Model Summary")
+![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/traning_val_accuracy.png "Model Summary")
+![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/loss.png "Model Summary")
+
+
