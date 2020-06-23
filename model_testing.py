@@ -4,25 +4,30 @@ import os
 from PIL import Image
 import cv2
 import keras
-from keras.models import Sequential
-from keras.layers import Conv2D
-from keras.layers import MaxPooling2D
-from keras.layers import Flatten
-from keras.layers import Dense
 from keras.preprocessing.image import ImageDataGenerator, load_img, image
-from sklearn.metrics import classification_report, confusion_matrix
+from skimage import transform
+from flask import Flask, redirect, url_for, request, render_template
+
 
 cnn = keras.models.load_model('cnn_model.h5')
 
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
-
-test_set = test_datagen.flow_from_directory('C:/Users/Tejan/.spyder-py3/work/pnuemonia/chest_xray/trail_1',
+test_set = test_datagen.flow_from_directory('C:/Users/Tejan/.spyder-py3/work/pnuemonia/chest_xray/test',
                                                  target_size = (64,64),
                                                  batch_size = 32,
                                                  class_mode = 'binary')
 
-img = image.load_img('C:/Users/Tejan/.spyder-py3/work/pnuemonia/chest_xray/trail_1/NORMAL2-IM-1427-0001.jpeg',
-                     target_size = (64,64))
+test_accuracy = cnn.evaluate(test_set, steps = 624)
 
-y_pred = cnn.predict_generator(test_set)
+def load(filename):
+   np_image = Image.open(filename)
+   np_image = np.array(np_image).astype('float32')/255
+   np_image = transform.resize(np_image, (64, 64, 3))
+   np_image = np.expand_dims(np_image, axis=0)
+   return np_image
+
+image = load('C:/Users/Tejan/.spyder-py3/work/pnuemonia/chest_xray/test/NORMAL/NORMAL2-IM-0329-0001.jpeg')
+image1 = load('C:/Users/Tejan/.spyder-py3/work/pnuemonia/test_image.jpg')
+
+cnn.predict(image)
