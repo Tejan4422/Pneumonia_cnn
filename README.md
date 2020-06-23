@@ -6,3 +6,8 @@ Convolutional Neural Network to detect whether a person's MRI scan has Pneumonia
   * Model Production with Flask
 * Packages Used : 
   * pandas, numpy , keras, tensorFlow, seaborn, flask, matplotlib
+* CNN Structure : 
+    1. CONV2D with filter size 3*3, No Padding, No Strides, activation Relu, Convert i/p to 64*64
+    2. MaxPooling with Pool size 2*2
+    3. CONV2D with filter size 3*3, No Padding, No Strides, activation Relu
+    4. MaxPooling with Pool size 2*2
