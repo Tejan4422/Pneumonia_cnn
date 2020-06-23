@@ -24,5 +24,7 @@ Following is the MRI of a Pneumonia +ve
 ![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/model_summary.png "Model Summary")
 ![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/traning_val_accuracy.png "Model Summary")
 ![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/loss.png "Model Summary")
+![alt text](https://github.com/Tejan4422/Pneumonia_cnn/blob/master/Model_deployment.png "Final Product")
+
 
 
